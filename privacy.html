@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datenschutzerklärung — Hel-Psy-Ter</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header class="container" role="banner">
+<div class="nav-inner">
+<div class="brand">
+<div class="logo">HP</div>
+<div>
+<div style="font-weight:700;color:var(--text)">Hel-Psy-Ter</div>
+<div style="font-size:13px;color:var(--muted);margin-top:2px">Helga — Psychische Therapie</div>
+</div>
+</div>
+<nav role="navigation" aria-label="Hauptnavigation">
+<ul>
+<li><a href="index.html">Startseite</a></li>
+<li><a href="about.html">Über mich</a></li>
+<li><a href="services.html">Therapieangebot</a></li>
+<li><a href="contact.html">Kontakt</a></li>
+</ul>
+</nav>
+<div class="settings">
+<button id="themeToggle" class="icon-btn" aria-label="Nachtmodus">🌙</button>
+<a href="privacy.html" style="text-decoration:none;color:var(--muted);font-weight:600">Datenschutz</a>
+</div>
+</div>
+</header>
+
+
+<main class="container">
+<section class="card">
+<h1>Datenschutzerklärung</h1>
+<p class="muted">Diese Datenschutzerklärung gilt für die Website von <strong>Hel-Psy-Ter – Helga Psychische Therapie</strong>. Sie dient als Mustertext und ersetzt keine juristische Beratung. Bitte lassen Sie den Text ggf. von einer Rechtsberatung prüfen.</p>
+
+
+<h2>1. Verantwortliche Stelle</h2>
+<p class="muted">Verantwortlich für die Datenverarbeitung ist: <br><strong>Helga — Hel-Psy-Ter</strong><br>Kontakt: kontakt@hel-psy-ter.de</p>
+
+
+<h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+<p class="muted">Personenbezogene Daten werden nur erhoben, wenn Sie diese aktiv z. B. per Kontaktformular oder E-Mail angeben. Die Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+
+
+<h2>3. Rechtsgrundlage</h2>
+<p class="muted">Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung bzw. zur Erfüllung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. a und b DSGVO).</p>
+
+
+<h2>4. Weitergabe an Dritte</h2>
+<p class="muted">Eine Weitergabe Ihrer Daten an Dritte erfolgt nur, wenn dies zur Vertragsabwicklung erforderlich ist oder Sie vorher eingewilligt haben.</p>
+
+
+<h2>5. Datenspeicherung</h2>
+<p class="muted">Daten werden für die Dauer gespeichert, die zur Bearbeitung Ihres Anliegens erforderlich ist, bzw. solange gesetzliche Aufbewahrungsfristen bestehen.</p>
+
+
+<h2>6. Ihre Rechte</h2>
+<p class="muted">Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie das Recht auf Datenübertragbarkeit und Widerruf erteilter Einwilligungen.</p>
+
+
+<h2>7. Kontakt</h2>
+<p class="muted">Bei Fragen zur Datenverarbeitung kontaktieren Sie bitte: hel-psy-ter@gmail.com (nur ein Platzhalter)</p>
+
+
+<p class="muted">Stand: <span id="yearText"></span></p>
+</section>
+
+
+<footer>
+<div class="muted">© <span id="year"></span> Hel-Psy-Ter — Helga Psychische Therapie</div>
+</footer>
+</main>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('yearText').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
