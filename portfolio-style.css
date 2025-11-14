@@ -1,0 +1,165 @@
+/* Grundlegender Reset und Schriftarten */
+:root {
+    --primary-color: #3f51b5; /* Dunkles, professionelles Blau */
+    --accent-color: #ff9800; /* Orange für Akzente */
+    --text-color: #333;
+    --background-color: #f4f4f9;
+    --font-stack: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+.page-header {
+    background-color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.page-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Portfolio Grid - Herzstück des Layouts */
+.portfolio-grid {
+    display: grid;
+    /* Dies ist der Responsive-Trick: 
+       - auto-fit: Füllt die verfügbare Breite.
+       - minmax(300px, 1fr): Jede Spalte ist mindestens 300px breit, sonst nimmt sie einen gleichen Bruchteil (1fr) des Platzes ein. 
+       - Auf einem großen Bildschirm werden so 3-4 Spalten angezeigt, auf einem Handy nur 1. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 0;
+}
+
+/* Einzelnes Projektelement (Der Link) */
+.project-item {
+    display: block;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Bild-Container für den Hover-Effekt */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    /* Erzeugt ein quadratisches Verhältnis 
+       Aufgrund von object-fit cover funktioniert dies sehr gut */
+    padding-top: 66%; 
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Stellt sicher, dass das Bild den Container füllt, ohne verzerrt zu werden */
+    transition: transform 0.5s;
+}
+
+.project-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Hover-Overlay (Tippen Sie zum Öffnen) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 81, 181, 0.75); /* Primärfarbe mit Transparenz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+/* Projekt-Details unter dem Bild */
+.project-title {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    padding: 15px 20px 5px;
+}
+
+.project-tag {
+    color: #777;
+    font-size: 0.9em;
+    padding: 0 20px 20px;
+}
+
+/* Footer */
+.page-footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Media Query für sehr kleine Bildschirme (Handy) */
+@media (max-width: 500px) {
+    .page-header h1 {
+        font-size: 2em;
+    }
+
+    .project-title {
+        font-size: 1.1em;
+    }
+
+    /* Das Grid bricht automatisch auf eine Spalte um, da minmax(300px, 1fr) 
+       auf kleinen Bildschirmen nur eine Spalte zulässt, die 100% Breite einnimmt.
+       Hier müssen wir keine weiteren Grid-Regeln definieren. */
+}

@@ -1,0 +1,436 @@
+/* Globale Einstellungen und Reset */
+:root {
+    --primary-color: #006989; /* Beruhigendes Blau */
+    --secondary-color: #f7f7f7; /* Heller Hintergrund */
+    --text-color: #333;
+    --heading-color: #1a1a1a;
+    --accent-color: #b0c4de; /* Hellblau für Akzente */
+    --border-radius: 4px;
+    --font-serif: 'Merriweather', serif;
+    --font-sans: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Schriftarten */
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    color: var(--heading-color);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.8em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+/* Header und Navigation (Unverändert) */
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.logo p {
+    font-size: 0.8em;
+    margin: 0;
+    color: var(--text-color);
+}
+
+#main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#main-nav ul li {
+    margin-left: 20px;
+}
+
+#main-nav ul a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+}
+
+#main-nav ul a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--heading-color);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Hero Sektion (Banner) */
+#hero {
+    background: url('placeholder-bg.jpg') center center/cover no-repeat; 
+    background-color: var(--accent-color);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 30px;
+    border-radius: var(--border-radius);
+    max-width: 700px;
+}
+
+#hero h2 {
+    color: white;
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Buttons (Unverändert) */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button.primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.button.primary:hover {
+    background-color: #004c64;
+    border-color: #004c64;
+}
+
+.button.secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.button.secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Allgemeine Sektionen */
+.content-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--accent-color);
+    margin: 40px auto;
+    width: 50%;
+}
+
+/* Flex Layout für "Über Mich" */
+.content-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.text-content {
+    flex: 2;
+}
+
+.image-box {
+    flex: 1;
+    text-align: center;
+}
+
+.placeholder-image {
+    width: 200px;
+    height: 200px; 
+    background-color: var(--accent-color);
+    border-radius: 50%; 
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--primary-color);
+    overflow: hidden;
+}
+
+.qualification-list {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+.quote-text {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Grid für Teaser und Services */
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-box {
+    background-color: var(--secondary-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: block; /* Wichtig für Anchor-Tags */
+    color: var(--text-color); /* Textfarbe in den Boxen */
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    color: var(--text-color); /* Verhindert Farbwechsel bei Hover */
+}
+
+.service-box h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+/* Kontakt Box */
+.contact-box {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.contact-details, .appointment-info {
+    flex: 1;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+}
+
+.contact-details ul {
+    list-style: none;
+    margin-bottom: 1.5em;
+    padding-left: 0;
+}
+
+.contact-details ul li {
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+
+/* Footer (Unverändert) */
+footer {
+    background-color: var(--heading-color);
+    color: white;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav a {
+    color: white;
+    margin-left: 15px;
+    opacity: 0.8;
+}
+
+.footer-nav a:hover {
+    opacity: 1;
+}
+
+/* ======================================= */
+/* MEDIA QUERIES (Responsive Design) */
+/* ======================================= */
+
+@media (max-width: 900px) {
+    .content-flex, .contact-box {
+        flex-direction: column;
+    }
+
+    .image-box {
+        order: -1; 
+        margin-bottom: 20px;
+    }
+
+    /* Bildgröße im Mobile-Layout */
+    .placeholder-image {
+        width: 150px;
+        height: 150px;
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    #main-nav {
+        width: 100%;
+        display: none; 
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+        background-color: var(--secondary-color);
+        border-top: 1px solid var(--accent-color);
+    }
+    
+    #main-nav.active {
+        display: flex; 
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    #main-nav ul li {
+        margin: 5px 0;
+    }
+
+    #main-nav ul a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+
+    /* Hero */
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    /* Grid bricht auf 1 Spalte */
+    .grid-3-col {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav {
+        margin-top: 10px;
+    }
+}
