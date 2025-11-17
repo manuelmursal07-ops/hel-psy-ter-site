@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+  
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>HELGAS PSYCHISCHE THERAPIE</b></h1>
+    <h6>Willkommen - oft ist das, wovor wir fliehen, genau dort, wo wir endlich <span class="w3-tag">ankommen.</span></h6>
+  </header>
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="[01] MeerStartseite.jpg" alt="Meer" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white">Wir</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>KÜMMERN UNS</b></h1>
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">KONTAKT</button></h6>
+    </div>
+  </header>
+
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
+
+    <!-- Blog entries -->
+<div class="w3-col l8 s12">
+
+  <!-- Blog entry 1 -->
+  <div class="w3-container w3-white w3-margin w3-padding-large">
+    <div class="w3-center">
+      <h3>Depression verstehen</h3>
+      <h5>Erste Schritte zur Selbsthilfe, <span class="w3-opacity">Nov 17, 2025</span></h5>
+    </div>
+
+    <div class="w3-justify">
+      <img src="[12] Wald.jpg" 
+           alt="Wald" style="width:100%" class="w3-padding-16">
+      <p><strong>Kurze Info:</strong> Depressionen sind weit verbreitet, aber gut behandelbar. Kleine Veränderungen im Alltag können schon helfen, die Stimmung zu stabilisieren. Leider häufen sich die Krankheiten die letzten Jahre an, durch den ganzen Stress in der Gesellschaft. Vor allem junge Menschen leiden von dieser Krankheit</p>
+      <p class="w3-left">
+        <button class="w3-button w3-white w3-border" onclick="likeFunction(this)">
+          <b><i class="fa fa-thumbs-up"></i> Like</b>
+        </button>
+      </p>
+      <p class="w3-right">
+        <button class="w3-button w3-black" onclick="myFunction('demo1')">
+          <b>Kommentare </b> <span class="w3-tag w3-white">2</span>
+        </button>
+      </p>
+      <p class="w3-clear"></p>
+
+      <!-- Comment section -->
+      <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+        <hr>
+        <div class="w3-col l2 m3">
+          <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?w=50" style="width:50px;">
+        </div>
+        <div class="w3-col l10 m9">
+          <h4>Maria <span class="w3-opacity w3-medium">Nov 18, 2025, 10:12 AM</span></h4>
+          <p>Danke für den Beitrag! Hat mir geholfen, meine eigenen Gefühle besser zu verstehen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Blog entry 2 -->
+  <div class="w3-container w3-white w3-margin w3-padding-large">
+    <div class="w3-center">
+      <h3>Stressbewältigung im Alltag</h3>
+      <h5>Praktische Tipps, <span class="w3-opacity">Nov 17, 2025</span></h5>
+    </div>
+
+    <div class="w3-justify">
+      <img src="[11] Hunde.jpg" 
+           alt="Hunde" style="width:100%" class="w3-padding-16">
+      <p>Stress ist normal, aber Dauerstress schadet. Atemübungen und kurze Pausen helfen, wieder Ruhe zu finden.</p>
+      <p class="w3-left">
+        <button class="w3-button w3-white w3-border" onclick="likeFunction(this)">
+          <b><i class="fa fa-thumbs-up"></i> Like</b>
+        </button>
+      </p>
+      <p class="w3-right">
+        <button class="w3-button w3-black" onclick="myFunction('demo2')">
+          <b>Kommentare </b> <span class="w3-tag w3-white">1</span>
+        </button>
+      </p>
+      <p class="w3-clear"></p>
+
+      <div class="w3-row w3-margin-bottom" id="demo2" style="display:none">
+        <hr>
+        <div class="w3-col l2 m3">
+          <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?w=50" style="width:50px;">
+        </div>
+        <div class="w3-col l10 m9">
+          <h4>Paul <span class="w3-opacity w3-medium">Nov 19, 2025, 2:30 PM</span></h4>
+          <p>Sehr hilfreich! Ich werde die Tipps gleich morgen ausprobieren.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+    <!-- Über mich -->
+    <div class="w3-col l4">
+      <!-- Mein Name -->
+      <div class="w3-white w3-margin">
+        <img src="[05] Profilbild.jpg" alt="Profilbild" style="width:100%" class="w3-grayscale">
+        <div class="w3-container w3-black">
+          <h4>Ich</h4>
+          <p>Ich habe mehrere Jahre Erfahrung im Bereich der Psychatrie und habe an der Uni X in X studiert. Mein Job und die Verbindung mit meinen Kunden ist mir sehr wichtig. </p>
+        </div>
+      </div>
+      <hr>
+
+     <!-- Posts -->
+<div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>Beliebte Therapie</h4>
+  </div>
+
+  <ul class="w3-ul w3-hoverable w3-white">
+    <li class="w3-padding-16">
+      <img src="[07] Mensch.jpg" 
+           alt="Entspannung" class="w3-left w3-margin-right" style="width:50px">
+      <span class="w3-large">Achtsamkeitsübungen</span>
+      <br>
+      <span>Einfach im Alltag Ruhe finden.</span>
+    </li>
+
+    <li class="w3-padding-16">
+      <img src="[09] Sonnenuntergang.jpg" 
+           alt="Gespräch" class="w3-left w3-margin-right" style="width:50px">
+      <span class="w3-large">Therapeutische Gespräche</span>
+      <br>
+      <span>Wie Worte helfen können, Klarheit zu gewinnen.</span>
+    </li>
+
+    <li class="w3-padding-16">
+      <img src="[08] Reflektion.jpg" 
+           alt="Selbstreflexion" class="w3-left w3-margin-right" style="width:50px">
+      <span class="w3-large">Selbstreflexion</span>
+      <br>
+      <span>Techniken, um sich selbst besser zu verstehen.</span>
+    </li>
+
+    <li class="w3-padding-16">
+      <img src="[10] Therapie.jpg" 
+           alt="Stressbewältigung" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+      <span class="w3-large">Stressbewältigung</span>
+      <br>
+      <span>Strategien, um im Alltag gelassener zu bleiben.</span>
+    </li>
+  </ul>
+</div>
+
+      <hr>
+
+      <!-- Map Section -->
+<div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>Standort</h4>
+  </div>
+
+  <div class="w3-container w3-white">
+    <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px; padding:0;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.746644800455!2d8.267558776992618!3d49.998138971497355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd97c5e5d79cd9%3A0xe3878c6918d6744b!2sGutenbergplatz%2C%20Mainz!5e0!3m2!1sde!2sde!4v1700000000000"
+        width="100%"
+        height="200"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+      <hr>
+
+      <!-- Themen -->
+<div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>Themen die ich anbiete</h4>
+  </div>
+
+  <div class="w3-container w3-white">
+    <p>
+      <span class="w3-tag w3-black w3-margin-bottom">Psychotherapie</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Achtsamkeit</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Stressbewältigung</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Angststörungen</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Depression</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Burnout</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Selbstwert</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Lebenskrisen</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Beziehungen</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Trauer</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Entspannung</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Veränderung</span>
+    </p>
+  </div>
+</div>
+
+      <hr>
+
+      <!-- Zusammenhalt -->
+<div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>Zusammenhalt</h4>
+  </div>
+
+  <div class="w3-row-padding w3-white" style="padding-top: 10px;">
+
+    <!-- Left column: short therapeutic impulses -->
+    <div class="w3-col s6">
+      <div class="w3-padding-small">
+        <h5>„Ein erster Schritt ist oft wichtiger als der perfekte Schritt.“</h5>
+        <p>Veränderung entsteht in kleinen, achtsamen Momenten.</p>
+      </div>
+
+      <div class="w3-padding-small w3-margin-top">
+        <h5>„Du musst es nicht alleine schaffen.“</h5>
+        <p>Gemeinsam können neue Wege sichtbar werden.</p>
+      </div>
+    </div>
+
+    <!-- Right column: calm therapeutic images -->
+    <div class="w3-col s6">
+      <p>
+        <img src="[02] Weizenfeld.jpg" 
+             alt="Calm nature" style="width:100%; border-radius:6px;">
+      </p>
+      <p>
+        <img src="[06] Zusammen.jpg" 
+             alt="Therapy symbol" style="width:100%; border-radius:6px;">
+      </p>
+    </div>
+
+  </div>
+</div>
+<hr>
+
+
+      <!-- Social Media -->
+
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Social Media</h4>
+        </div>
+        <div class="w3-container w3-xlarge w3-padding">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+      </div>
+      <hr>
+      
+      <!-- Kontaktaufnahme -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Kontaktieren Sie mich</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>Schreiben Sie mich an und erhalten Sie innerhalb paar Tagen eine Antwort.</p>
+          <p><input class="w3-input w3-border" type="text" placeholder="E-Mail" style="width:100%"></p>
+          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Kontakt</button></p>
+        </div>
+      </div>
+
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px; text-align:center;">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom">
+    <i class="fa fa-arrow-up w3-margin-right"></i>Oben
+  </a>
+  <p style="margin-top: 10px;">
+    © 2025 Alle Rechte Vorenthalten - Name Nachname | 
+    <a href="impressum.html" style="text-decoration:none; color:inherit;">
+      Impressum
+    </a>
+    | 
+    <a href="datenschutzerklärung.html" style="text-decoration:none; color:inherit;">
+      Datenschutzerklärung
+    </a>
+  </p>
+</footer>
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+</script>
+
+</body>
+</html>
