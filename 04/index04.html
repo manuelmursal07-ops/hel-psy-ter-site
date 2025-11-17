@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPT - Helgas Psychische Therapie | Approbierte Psychotherapie</title>
+    
+    <style>
+        :root {
+            --primary-color: #0077b6; /* Dunkelblau, beruhigend */
+            --secondary-color: #48cae4; /* Hellblau, Akzent */
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: white;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .hero {
+            background: var(--light-bg);
+            text-align: center;
+            padding: 4em 0;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .hero h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1.5em;
+            font-size: 2em;
+        }
+
+        /* Stil für die "Über mich" Sektion */
+        .about-me {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .about-photo {
+            flex: 0 0 300px; /* Feste Breite für das Bild */
+            text-align: center;
+        }
+
+        .about-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+
+        .vita-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .vita-table th, .vita-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .vita-table th {
+            background-color: var(--primary-color);
+            color: white;
+            width: 30%;
+        }
+        
+        /* Stil für die Akkordeon-Struktur (Häufige Fragen / Behandlung) */
+        .accordion button {
+            background-color: white;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            transition: 0.4s;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion button:hover, .accordion .active {
+            background-color: #e9ecef;
+        }
+        
+        .accordion-content {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-left: 3px solid var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .accordion-content p, .accordion-content ul {
+            padding-top: 15px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            margin-top: 30px;
+        }
+        
+        /* Responsive Anpassungen */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .about-me {
+                flex-direction: column;
+            }
+            .about-photo {
+                flex: 0 0 auto;
+                width: 60%;
+                margin: 0 auto 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 1.5em; font-weight: bold;">HPT - Helgas Psychische Therapie</span>
+                <nav>
+                    <ul>
+                        <li><a href="#ueber-mich">Über mich</a></li>
+                        <li><a href="#spektrum">Behandlungsspektrum</a></li>
+                        <li><a href="#kontakt">Kontakt & Kosten</a></li>
+                        <li><a href="#impressum">Impressum</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Vertrauen. Wachstum. Veränderung.</h1>
+            <p>Ihre approbierte Praxis für Psychotherapie in [Stadt].</p>
+            <p style="font-size: 1.1em; font-weight: bold; color: var(--primary-color);">Rufen Sie uns an: 0123 / 456 7890</p>
+        </div>
+    </section>
+
+    <section id="ueber-mich" class="about">
+        <div class="container">
+            <h2>Helga [Nachname] – Ihr Weg zur psychischen Gesundheit</h2>
+            
+            <div class="about-me">
+                <div class="about-photo">
+                    <img src="placeholder_photo.jpg" alt="Foto von Helga Nachname, Psychotherapeutin">
+                    <p style="margin-top: 10px;">**Helga [Nachname], M.Sc. Psychologin**<br>Approbierte Psychologische Psychotherapeutin</p>
+                </div>
+                
+                <div class="about-text">
+                    <p>Herzlich willkommen in meiner Praxis für **Helgas Psychische Therapie (HPT)**. Mein Name ist Helga [Nachname] und ich biete Ihnen in [Stadt] eine fundierte und individuelle Verhaltenstherapie.</p>
+                    
+                    <h3>Mein therapeutisches Selbstverständnis</h3>
+                    <p>Ich sehe mich als Ihre **Wegbegleiterin**, die Sie dabei unterstützt, Ihre inneren Stärken (wieder) zu entdecken und festgefahrene Muster zu durchbrechen. Im Zentrum meiner Arbeit stehen **Empathie, Transparenz und eine wissenschaftlich fundierte Methodik**.</p>
+                    <ul>
+                        <li>Fokus auf **Kognitiver Verhaltenstherapie** und **Achtsamkeitsbasierten Methoden**.</li>
+                        <li>Schaffung eines **vertrauensvollen und sicheren** Therapieumfelds.</li>
+                        <li>Entwicklung **konkreter Lösungsstrategien** für Ihren Alltag.</li>
+                    </ul>
+
+                    <h3>Beruflicher Werdegang und Qualifikationen</h3>
+                    <table class="vita-table">
+                        <thead>
+                            <tr>
+                                <th>Zeitraum</th>
+                                <th>Station</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>seit 20XX</td>
+                                <td>**Gründung der eigenen Praxis HPT** (Helgas Psychische Therapie) in [Stadt]</td>
+                            </tr>
+                            <tr>
+                                <td>20XX - 20XX</td>
+                                <td>Psychotherapeutin an der **[Name der Klinik/Ambulanz]**, Fokus Angst & Depression</td>
+                            </tr>
+                            <tr>
+                                <td>20XX</td>
+                                <td>**Approbation** als Psychologische Psychotherapeutin, Fachkunde Verhaltenstherapie</td>
+                            </tr>
+                            <tr>
+                                <td>20XX - 20XX</td>
+                                <td>Ausbildung am **[Name des Instituts]** (VT)</td>
+                            </tr>
+                            <tr>
+                                <td>20XX</td>
+                                <td>Studium der Psychologie (M.Sc.) an der **[Name der Universität]**</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="spektrum">
+        <div class="container">
+            <h2>Mein Behandlungsspektrum</h2>
+            
+            <div class="accordion">
+                <button class="accordion-header">Angststörungen und Phobien<span class="icon">+</span></button>
+                <div class="accordion-content">
+                    <p>Behandlung von Panikstörungen, spezifischen Phobien (z.B. Spinnen, Höhen), Sozialen Ängsten und generalisierten Angststörungen.</p>
+                </div>
+                
+                <button class="accordion-header">Depressionen und Burnout<span class="icon">+</span></button>
+                <div class="accordion-content">
+                    <p>Unterstützung bei der Bewältigung von Niedergeschlagenheit, Antriebslosigkeit und emotionaler Erschöpfung. Fokus auf Aktivitätsaufbau und kognitiver Umstrukturierung.</p>
+                </div>
+                
+                <button class="accordion-header">Zwangsstörungen (Gedanken und Handlungen)<span class="icon">+</span></button>
+                <div class="accordion-content">
+                    <p>Erarbeitung von Exposition und Reaktionsmanagement zur Reduktion von Zwangsgedanken und -handlungen.</p>
+                </div>
+                
+                <button class="accordion-header">Reaktionen auf schwere Belastungen und Traumata<span class="icon">+</span></button>
+                <div class="accordion-content">
+                    <p>Stabilisierung und traumaspezifische Bearbeitung, z.B. bei Posttraumatischer Belastungsstörung (PTBS).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background-color: var(--light-bg);">
+        <div class="container">
+            <h2>Kontakt und wichtige Informationen</h2>
+            
+            <div style="display: flex; gap: 40px;">
+                <div style="flex: 1;">
+                    <h3>So erreichen Sie mich:</h3>
+                    <p><strong>Telefonische Sprechzeiten:</strong></p>
+                    <p>Dienstag: 10:00 - 11:00 Uhr<br>Donnerstag: 14:00 - 15:00 Uhr<br>Telefon: **0123 / 456 7890**</p>
+                    <p><strong>E-Mail:</strong> info@hpt-psychotherapie.de</p>
+                    <p><strong>Adresse der Praxis:</strong><br>Helgas Psychische Therapie (HPT)<br>[Musterstraße 12]<br>[12345 Musterstadt]</p>
+                </div>
+                <div style="flex: 1;">
+                    <h3>Kostenübernahme</h3>
+                    <p>Als approbierte Psychotherapeutin kann ich mit folgenden Kostenträgern abrechnen:</p>
+                    <ul>
+                        <li>**Private Krankenversicherungen** und Beihilfe (Kostenübernahme muss individuell geklärt werden).</li>
+                        <li>**Selbstzahler** (Das Honorar richtet sich nach der GOP).</li>
+                        <li>**Gesetzliche Krankenkassen:** [Hier bitte spezifische Information einfügen, z.B. "Die Möglichkeit der Abrechnung über das Kostenerstattungsverfahren besteht."]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="impressum" style="padding: 20px 0;">
+        <div class="container" style="text-align: center;">
+            <a href="#" style="color: var(--primary-color); text-decoration: none; margin: 0 15px;">Impressum</a> | 
+            <a href="#" style="color: var(--primary-color); text-decoration: none; margin: 0 15px;">Datenschutz</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2025 HPT - Helgas Psychische Therapie | Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var headers = document.querySelectorAll('.accordion-header');
+            
+            headers.forEach(function(header) {
+                header.addEventListener('click', function() {
+                    // Den Inhalt direkt nach dem Button auswählen
+                    var content = this.nextElementSibling;
+                    
+                    // Toggle der 'active' Klasse auf dem Button
+                    this.classList.toggle('active');
+                    
+                    // Toggle der Sichtbarkeit des Inhalts
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        this.querySelector('.icon').textContent = '+';
+                    } else {
+                        // MaxHeight auf die tatsächliche Scrollhöhe setzen
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        this.querySelector('.icon').textContent = '−'; // Minus-Zeichen
+                    } 
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
